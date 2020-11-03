@@ -17,8 +17,10 @@ for query in data:
     soup = BeautifulSoup(source, 'html.parser')
     search_div = soup.find_all(class_='PZPZlf') # find all divs tha contains search result
     for result in search_div: # loop result list
-        f = open("result.txt", "a")
+        f = open("result_2.txt", "a")
+        f.write("\n")
         f.write(result.text)
+        f.write("\n")
         f.close()
     #print('Title: %s'%result.h3.string) #geting h3 
     #print('Url: %s'%result.a.get('href')) #geting a.href 
